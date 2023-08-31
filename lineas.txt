@@ -1,0 +1,64 @@
+Localización CDAS BERTOU
+/sps/pauger/users/bertou/CDAS
+
+Descargar datos Auger:
+
+scp -r jgrisale@cca.in2p3.fr:/sps/pauger/Malargue/Raid/monit/Sd/2020/ .
+
+rsync -avh /home/cristians/jennifer/data-lyoncc/2019 jgrisales@10.5.5.46:/scratch/jgrisales/data_auger
+
+
+-----------ROOT-----
+librerías: consultar-> root-config --incdir --libs
+
+compilar: g++ -o read read.C `root-config --cflags --libs`
+
+g++ -g -o read_multiple read_multiple.C -L/home/csarmiento/root-6-20.04/lib -lGui -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -pthread -lm -ldl -rdynamic
+
+g++ -g -o read_multiple read_multiple.C +(resultado de consulta librerías -L.....)
+
+-> configurar llaves públicas:
+terminal: cat ~/.ssh/id_rsa.pub
+incluir llave acá: https://github.com/settings/keys
+
+
+-> REPO AUGER PROCESADO
+sftp -o Port=443 gaugo@augerlogin.iap.kit.edu
+
+
+OFFLINE (Auger)
+
+Lo que veo de este software en particular es que necesita instalarse o mas bien ejecutarse directamente en tu $HOME. Las rutas de ROOT y de CDAS son:
+
+ROOT = /opt/auger/software/ApeInstalled/External/root/5.34.38/
+CDAS = /opt/auger/software/ApeInstalled/cdas/v6r0p2trunk20190423/
+
+Igualmente el resto del software lo puedes encontrar en la ruta  /opt/auger/software/ApeInstalled/External y el Offline en /opt/auger/software/ApeInstalled/offline/3.99.2a-icrc-2019/
+
+
+No olvides que para usar el Offline siempre se debe cargar el modulo y luego el environment:
+
+
+module load devtools/gcc/6.2.0 devtools/mpi/openmpi/3.1.4
+
+eval `/opt/auger/software/ApeInstalled/offline/3.99.2a-icrc-2019/bin/auger-offline-config --env-sh`
+
+
+corriendo el script de bash con el root  a las 11:21
+a ver cuánto se demora
+
+
+SCALER ANALYSIS
+
+Manager.h
+   class Manager {
+    unsigned long int fCurrentGPSSecond = 0;
+    unsigned long int fNextOutputGPSSecond = 0;
+
+    unsigned short fInterval = 300 /*s*/;
+ 
+ 
+ En mi maquinita blanca:
+ 
+ activar ape: eval $(./ape sh offline) dentro de la carpeta ape-auger-3.99.2a
+

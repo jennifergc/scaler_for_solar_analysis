@@ -1,0 +1,28 @@
+Datos CNRS AUGER -> Todo los meses y años juntos
+
+cd /sps/pauger/users/bertou/solar
+
+Datos por año /sps/pauger/Malargue/Raid/monit/Sd/2005/03
+
+
+Solar Web
+Compile with g++ -O -Wall -o solar-web solar-web.cc
+
+cluster
+ssh jgrisale@cca.in2p3.fr
+
+Profe hola. Las personas que podrían conformar el equipo son: Maria José (Podcast y coordinación), Verónica (Ejecución Módulos+VENICE) y Karen Anaya/Alexa Serrano (Página Web y material didáctico). Hablé con Mayra y dice que puede ayudar en podcast como el año pasado hasta el 25 de junio, luego de eso podría aceptar un contrato corto para terminar esa parte.
+
+scp jgrisale@cca.in2p3.fr:/sps/pauger/users/bertou/solar/dat/scaler* .
+
+Hello, well. I have done the cleaning of all available years. If you look at it year by year, the behaviour is similar to what I showed you last time. However, when you look at the behaviour in all years you see a drastic decrease in the scaler rate. 
+
+That results in two distributions associated with the years in which you have these very pronounced rates.
+
+In the grey farm, you find the interval of solar cycle 24 starting in December 2008 and ending in May 2020.
+
+I have checked in the literature, and a recent paper shows an anti-correlation in sunspot number and measured cosmic ray intensity. Now all that remains for me to do is to apply the corrections.
+
+I have checked Jimmy's thesis who works on solar cycle scalers, and he sets out a methodology for correcting the data for SD array decay and for pressure. Next meeting I will show the results of applying this methodology to the data. Thank you.
+
+Translated with www.DeepL.com/Translator (free version)

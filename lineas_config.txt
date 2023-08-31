@@ -1,0 +1,7 @@
+CMake Error at CMakeLists.txt:159 (MESSAGE):
+  No external AERAROOTIO found.  Run cmake with -DCDAS_STANDALONE=1 to
+  compile without FD and RD
+
+
+
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
