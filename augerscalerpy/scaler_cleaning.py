@@ -7,7 +7,8 @@ def scaler_clean(file, name):
     '''
     --scaler_clean--
     scaler_clean(file, name)
-    Realiza la limpieza y de los datos corregidos a través de scaler analysis para su correcta visualización.
+    Realiza la limpieza y de los datos corregidos a través de 
+    scaler analysis para su correcta visualización.
     Se eliminan los valores cero y los valores atípicos.
     Finalmente se convierte la hora gps de los datos a UTC.
 
