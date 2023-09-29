@@ -1,0 +1,9 @@
+fGPSSecond
+fMeanPressure
+fMeanTemperature
+fNumberOfStationsUsedInMean
+fScalerArrayMean
+fArrayVarianceOfMeanScalers
+fCorrectedScalerArrayMean
+fCorrectedArrayVarianceOfMeanScalers
+
