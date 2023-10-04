@@ -16,15 +16,15 @@ int main() {
     UInt_t stations;
     Double_t arrmean;
     Double_t arrvar;
-    Double_t nsdvar;
+    Int_t nsdvar;
     Double_t errmean;
     std::vector<Double_t> mean300;
     std::vector<Float_t> press300;
-    std::vector<Float_t> arrmean300;
-    std::vector<Float_t> arrvar300;
-    std::vector<Float_t> nsdvar300;
-    std::vector<Float_t> errmean300;
-    std::vector<Float_t> stations300;
+    std::vector<Double_t> arrmean300;
+    std::vector<Double_t> arrvar300;
+    std::vector<Int_t> nsdvar300;
+    std::vector<Double_t> errmean300;
+    std::vector<UInt_t> stations300;
     std::vector<UInt_t> gpstime300;
 
     // Abre el archivo de salida
@@ -59,8 +59,8 @@ int main() {
                 if (test > 0) {
                     // Extracción de información del árbol
                     TTree *tree = (TTree *)input->Get("sdst::ScalerSummaryDataTree");
-		    tree->SetBranchAddress("fScalerArrayMean", &arrmean);
-		    tree->SetBranchAddress("fDeviationVariance", &arrvar);
+		    tree->SetBranchAddress("fCorrectedArrayMean", &arrmean);
+		    tree->SetBranchAddress("fCorrectedArrayMeanSigma", &arrvar);
 		    tree->SetBranchAddress("fCorrectedArrayVarianceOfMeanScalers", &errmean);
 		    tree->SetBranchAddress("fNumberStationDeviation", &nsdvar);
                     tree->SetBranchAddress("fCorrectedScalerArrayMean", &mean);
@@ -75,7 +75,7 @@ int main() {
                         // Agrega los valores al vector
                         mean300.push_back(mean);
                         press300.push_back(press);
-			arrvar300.push_back(nsdvar);
+			arrvar300.push_back(arrvar);
 			errmean300.push_back(errmean);
 			gpstime300.push_back(gpstime);
 			stations300.push_back(stations);

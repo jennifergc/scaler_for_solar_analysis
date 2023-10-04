@@ -26,9 +26,10 @@ def scaler_clean(file, name):
     #AJUSTE EXCESOS
     #SDBAD1 =taste[taste['ScalerCorr'] > 1900 ]
     #SDBAD2 =taste[taste['ScalerCorr'] < 1500 ]
-    SDOK = taste[taste['ScalerCorr'] > 1580  ]
-    SDOK = SDOK[SDOK['ScalerCorr'] < 1700 ]
-
+    #SDOK = taste[taste['ScalerCorr'] > 1580  ]
+    #SDOK = SDOK[SDOK['ScalerCorr'] < 1700 ]
+    #SDOK = taste
+    SDOK = taste[taste['ScalerCorr'] < 1800  ]
     #Ajuste de la secuencia temporal del GPS de los tanques a UTC
     fixed =SDOK.assign(Group=315964786)
     fixed.shape
@@ -43,7 +44,7 @@ def scaler_clean(file, name):
 ###########################################
 import matplotlib.pyplot as plt
 ########################################### 
-def plot_data(data_frame,name):
+def plot_data(data_frame,name,scalercol):
     '''
     ---plot_data---
     plot_data(data_frame,'name')
@@ -61,10 +62,10 @@ def plot_data(data_frame,name):
     
     # Convertir las columnas en arreglos de NumPy
     dates = data_frame['Date'].values
-    intensity = data_frame['ScalerCorr'].values
+    intensity = data_frame[scalercol].values
 
     # Crear el gráfico de puntos
-    plt.scatter(dates, intensity, s=1, label='1 hour average data')
+    plt.scatter(dates, intensity, s=1, label='5min average data')
     
     # Configurar ejes, título y leyenda
     plt.grid(True, linestyle='--', alpha=0.5)
