@@ -1,0 +1,868 @@
+    1  ls
+    2  sudo apt update && sudo apt upgrade
+    3  sudo ufw enable
+    4  sudo apt-get install gnuplot
+    5  sudo apt-get install vim
+    6  sudo apt install ubuntu-restricted-extras
+    7  python -V
+    8  python -v
+    9  python3 -v
+   10  python3 -V
+   11  sudo apt-get install python3-pip
+   12  sudo pip3 install [jupyter](https://saturncloud.io/glossary/Jupyter)
+   13  pip install jupyterlab
+   14  pip install notebook
+   15  jupyter notebook
+   16  jupyter lab
+   17  pip install jupyter notebook
+   18  jupyter notebook
+   19  pip3 install notebook
+   20  jupyter --version
+   21  sudo apt install git-all
+   22  git init
+   23  git
+   24  cd Documentos/
+   25  mkdir prueba
+   26  git init
+   27  cd prueba/
+   28  git init
+   29  cd ~
+   30  ssh-keygen -t rsa -C "jennifer.grisales@saber.uis.edu.co"
+   31  cat ~/.ssh/id_rsa.pub
+   32  ssh -T git@github.com
+   33  cd Documentos/prueba/
+   34  ls
+   35  git init
+   36  git checkout master
+   37  git checkout
+   38  vim README.md
+   39  git checkout
+   40  cd ../
+   41  git remote add origin git@github.com:jennifergc/pruena_02.git
+   42  ls
+   43  ls -al ~/.ssh
+   44  git remote add origin [git@github.com:jennifergc/pruena_02.git]
+   45  ls
+   46  mkdir git_guide
+   47  ls
+   48  mv GIT_perfect_basic_guide.ipynb git_guide/
+   49  cd git_guide/
+   50  git init
+   51  git remote add origin [git@github.com:jennifergc/git_guide.git]
+   52  git pull
+   53  git pull git_guide.git
+   54  ls
+   55  cd ../
+   56  mv git_guide/ gitCHANGEEE
+   57  git clone https://github.com/jennifergc/git_guide.git
+   58  ls
+   59  mv gitCHANGEEE/GIT_perfect_basic_guide.ipynb git_guide/
+   60  cd git_guide/
+   61  ls
+   62  mv ../../Descargas/GIT_perfect_basic_guide.md .
+   63  ls
+   64  git pull
+   65  git add -A
+   66  git status
+   67  git commit -m "guia_V1"
+   68  git config --global user.email "jennifer.grisales@saber.uis.edu.co"
+   69  git config --global user.name "jennifergc"
+   70  git commit -m "guia_V1"
+   71  git push
+   72  git pull
+   73  git push
+   74  git config --global credential.helper store
+   75  git push
+   76  ls
+   77  cp GIT* ../
+   78  cd ../
+   79  ls
+   80  rm -r git_guide/
+   81  ls
+   82  ssh -T git@github.com
+   83  git clone git@github.com:jennifergc/git_guide.git
+   84  ls
+   85  cd git_guide/
+   86  git init
+   87  git pull
+   88  cp ../GIT* .
+   89  ls
+   90  git add -A
+   91  git commit -m "guia_V1"
+   92  git push
+   93  git status
+   94  git add -A
+   95  git commit -m "guia_V2"
+   96  git pull
+   97  ls
+   98  git push
+   99  git pull
+  100  git config pull.rebase false
+  101  git pull
+  102  git push
+  103  exit
+  104  pip3 install notebook
+  105  jupyter --version
+  106  snap info jupyter
+  107  sudo apt install jupyter
+  108  jupyter notebook
+  109  jupyter --version
+  110  pip3 install notebook
+  111  jupyter --version
+  112  conda update jupyter
+  113  pip install -U jupyter
+  114  jupyter notebook
+  115  exit
+  116  cd Documentos/
+  117  ls
+  118  git clone git@github.com:jennifergc/scaler_for_solar_analysis.git
+  119  ls
+  120  cd scaler_for_solar_analysis/
+  121  cd ../
+  122  mkdir msc_tesis
+  123  ls
+  124  cd msc_tesis/
+  125  git clone git@github.com:jennifergc/scaler_for_solar_analysis.git
+  126  cd ../
+  127  ls
+  128  rm -r scaler_for_solar_analysis
+  129  ls
+  130  cd msc_tesis/
+  131  ls
+  132  cd scaler_for_solar_analysis/
+  133  git init
+  134  git status
+  135  git add -A
+  136  git commit -m "Trabajo realizado hasta julio del 2023"
+  137  git push
+  138  mkdir data_red
+  139  ls
+  140  mv average_window.C data_red/
+  141  mv data_red/ data_reduction
+  142  ls
+  143  git status
+  144  git add -A
+  145  git commit -m "Work until july 2023"
+  146  git push
+  147  jupyter notebook
+  148  git status
+  149  cd
+  150  cd Documentos/
+  151  ls
+  152  cd git
+  153  cd git_guide/
+  154  git init
+  155  jupyter notebook
+  156  git status
+  157  git add -A
+  158  git commit -m "guide v3"
+  159  git push
+  160  ls
+  161  cd 
+  162  cd Documentos/
+  163  ls
+  164  cd msc_tesis/
+  165  ls
+  166  git clone git@github.com:jennifergc/master-thesis-proposal.git
+  167  ls
+  168  cd master-thesis-proposal/
+  169  ls
+  170  git status
+  171  git add -A
+  172  git commit -m "Propuesta documento y presentación"
+  173  git push
+  174  ls
+  175  cd ../
+  176  ls
+  177  cd scaler_for_solar_analysis/
+  178  git push
+  179  git status
+  180  cd Documentos/
+  181  ls
+  182  cd msc_tesis/
+  183  ls
+  184  scaler_for_solar_analysis/
+  185  cd scaler_for_solar_analysis/
+  186  git init
+  187  git pull
+  188  git add
+  189  git add .
+  190  git status
+  191  cd ../
+  192  ls
+  193  cd master-thesis-proposal/
+  194  ls
+  195  git pull
+  196  cd ../scaler_for_solar_analysis/
+  197  jupyter notebook
+  198  cd
+  199  sudo apt-get update -y
+  200  sudo apt-get install -y python-scientific
+  201  sudo apt-get install -y python3 Numpy
+  202  pip install pandas
+  203  pip3 install pandas
+  204  pip3 install numpy
+  205  pip3 install Numpy
+  206  pip3 install matplotlib
+  207  pip3 install Matplotlib
+  208  puthon3
+  209  python3
+  210  pip3 install seaborn
+  211  python3
+  212  pip3 install astropy
+  213  pip3 install astropy[all]
+  214  pip3 install PyWavelets
+  215  pip3 install statsmodels
+  216  cd Documentos/
+  217  ls
+  218  cd msc_tesis/
+  219  ls
+  220  cd scaler_for_solar_analysis/
+  221  ls
+  222  git init
+  223  git status
+  224  git add .
+  225  git commit -m "Estilo y periodicidad"
+  226  git push
+  227  jupyter notebook
+  228  cd Documentos/msc_tesis/
+  229  cd scaler_for_solar_analysis/
+  230  git init
+  231  git status
+  232  git add .
+  233  git commit -m "Suavizado de los datos para espectro de potencias"
+  234  git push
+  235  git pull
+  236  jupyter notebook
+  237  cd Documentos/msc_tesis/
+  238  cd scaler_for_solar_analysis/
+  239  git init
+  240  git status
+  241  git add .
+  242  git commit -m "23 septiembre espectro de potencias"
+  243  git push
+  244  jupyter notebook
+  245  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  246  git init
+  247  git pull
+  248  git status
+  249  git add .
+  250  git commit -m "24 septiembre neutron monitor y FD"
+  251  git push
+  252  jupyter notebook
+  253  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  254  git pull
+  255  git add .
+  256  git status
+  257  git commit -m "Nautron monitos progress"
+  258  git push
+  259  jupyter notebook
+  260  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  261  git init
+  262  git status
+  263  git add .
+  264  git commit -m "Ajustes a las gráficas"
+  265  git push
+  266  jupyter notebook
+  267  cd ../
+  268  ls
+  269  cd scaler_for_solar_analysis/
+  270  cd data_reduction/
+  271  ls
+  272  vim average_window.C 
+  273  ssh cristians@167.249.40.26
+  274  sudo apt install git make cmake3 gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel python openssl-devel
+  275  cd
+  276  sudo apt install cmake
+  277  dpkg -L cmake
+  278  dpkg -L python3
+  279  sudo apt install make
+  280  sudo apt install gcc
+  281  sudo apt install binutils
+  282  sudo apt install libX11-devel
+  283  sudo apt install libXpm-devel
+  284  sudo apt-get install libx11-dev
+  285  sudo apt-get install libxpm-dev
+  286  sudo apt-get install libxft-dev
+  287  cd
+  288  mkdir root
+  289  ls
+  290  cd root/
+  291  ls
+  292  tar xzfv root_v6.18.04.source.tar.gz 
+  293  cd root-6.18.04/
+  294  mkdir buildroot
+  295  cd buildroot/
+  296  ls
+  297  ll
+  298  cmake ..
+  299  ls
+  300  cd data_reduction/
+  301  ls
+  302  vim scaler_300s.C
+  303  sudo apt-get install dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev python libssl-dev
+  304  sudo apt-get install gfortran libpcre3-dev xlibmesa-glu-dev libglew-dev libftgl-dev libmysqlclient-dev libfftw3-dev libcfitsio-dev graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev python-numpy libxml2-dev libkrb5-dev libgsl0-dev qtwebengine5-dev
+  305  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  306  git add .
+  307  git status
+  308  git commit -m "Revisando todos los cálculos iniciales"
+  309  git status
+  310  git push
+  311  jupyter notebook
+  312  cd root/root-6.18.04/buildroot/
+  313  ll
+  314  cmake ..
+  315  pwd
+  316  cd
+  317  sudo apt-get install libxft-dev
+  318  sudo apt-get install libXext-dev
+  319  sudo apt-get install Xft-dev
+  320  apt-get uptade
+  321  sudo apt-get uptade
+  322  sudo apt-get updade
+  323  sudo apt-get update
+  324  sudo apt-get upgrade
+  325  sudo apt-get update
+  326  /home/jennifer/root/root-6.18.04/buildroot
+  327  cd /home/jennifer/root/root-6.18.04/buildroot
+  328  cmake ..
+  329  cmake Dall=on .
+  330  cmake -DCMAKE_INSTALL_PREFIX=~/root/root-6.18.04-install .
+  331  make -j4
+  332  cmake -Dtesting=ON -Droottest=ON roottest -Dtmva-sofie=ON -Dbuiltin_xrootd=ON -DPython3_EXECUTABLE=python3 -DPython2_EXECUTABLE=python -DCMAKE_INSTALL_PREFIX=../install ../root
+  333  cd 
+  334  sudo apt install cmake --fix
+  335  sudo apt-get install cmake
+  336  sudo apt-get install libxext-dev
+  337  which cmake
+  338  sudo make install
+  339  sudo install make
+  340  sudo apt install make
+  341  sudo apt-get install libx11-dev
+  342  sudo apt-get install libxft-dev
+  343  sudo apt-get install libssl-dev
+  344  cd /home/jennifer/root/root-6.18.04/buildroot
+  345  make -j4
+  346  vim /home/jennifer/root/root-6.18.04/buildroot/AFTERIMAGE-prefix/src/AFTERIMAGE-stamp/AFTERIMAGE-build-*.log
+  347  make
+  348  make -j4
+  349  which cmake
+  350  cmake --version
+  351  root
+  352  which root
+  353  sudo snap install cmake --classic
+  354  which cmake
+  355  cmake --version
+  356  cd /usr/bin/cmake
+  357  cd /usr/bin/
+  358  ls
+  359  sudo snap install cmake --classic
+  360  snap help refresh
+  361  cd
+  362  vim ~/.bashrc
+  363  ~/cmake-3.27.6/bin/cmake --version
+  364  /cmake-3.27.6/bin/cmake --version
+  365  /HOME/cmake-3.27.6/bin/cmake --version
+  366  sudo apt-get update
+  367  sudo apt-get upgrade
+  368  cmake --version
+  369  sudo apt-get update cmake
+  370  which cmake
+  371  where cmake
+  372  pwd
+  373  ls
+  374  cd snap/
+  375  ls
+  376  cd snapd-desktop-integration/
+  377  ls
+  378  cd ../
+  379  cd snap-store/
+  380  ls
+  381  cd ../
+  382  snap list
+  383  which cmake
+  384  export PATH="/usr/bin:$PATH"
+  385  source ~/.bashrc
+  386  cmake --version
+  387  sudo uninstall cmake
+  388  sudo apt-get --purge cmake
+  389  cmake --version
+  390  cd root/root_src/
+  391  ls
+  392  cd ../
+  393  ls
+  394  cd root_build
+  395  ls
+  396  cmake --build . --target install -j 4
+  397  cmake --build . --target install -j1
+  398  cmake --build . --target install -j 2
+  399  cd ../
+  400  ls
+  401  rm -r -y root_build/
+  402  rm -r root_build/
+  403  rm -r root_install/
+  404  rm -r root_src/
+  405  tar -xzvf root_v6.26.06.source.tar.gz 
+  406  ls
+  407  mv root-6.26.06 root_src
+  408  mkdir root_build
+  409  mkdir root_install
+  410  cd root_build/
+  411  cat /proc/cpuinfo
+  412  cd ../
+  413  cd root_build/
+  414  cmake -DCMAKE_INSTALL_PREFIX=../root_install ../root_src
+  415  cmake --build . --target install -j 2
+  416  source ../root_install/bin/thisroot.sh
+  417  root
+  418  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  419  git status
+  420  git add .
+  421  git commit -m "Data reduction revison"
+  422  git push
+  423  cd data_reduction/
+  424  ls
+  425  vim scaler_300s.C
+  426  cd onefile/
+  427  ls
+  428  root-config --incdir --libs
+  429  root-config
+  430  root-confg
+  431  root-config --cflags --libs
+  432  ls
+  433  vim scaler_300s.C
+  434  cd
+  435  cd root/root_build/
+  436  source ../root_install/bin/thisroot.sh
+  437  root-config --cflags --libs
+  438  cd
+  439  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/
+  440  cd onefile/
+  441  ls
+  442  g++ -g -o scaler300s scaler_300s.C +-L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  443  cd
+  444  vim ~/.bashrc
+  445  source ~/.bashrc
+  446  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  447  ls
+  448  pwd
+  449  cd
+  450  cd root/root_src/cd ../
+  451  cd ..7
+  452  cd ../
+  453  cd
+  454  cd root/
+  455  cd root_build/
+  456  source ../root_install/bin/thisroot.sh
+  457  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  458  cd
+  459  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  460  g++ -g -o scaler300s scaler_300s.C +-L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  461  ls
+  462  vim average_window.C
+  463  g++ -g -o scaler300s scaler_300s.C +-L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -l
+  464  root
+  465  g++ -g -o scaler300s scaler_300s.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  466  which root
+  467  source ~/.bashrc
+  468  g++ -g -o scaler300s scaler_300s.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  469  pwd
+  470  ls
+  471  vim scaler_300s.C
+  472  which root
+  473  whereis root
+  474  source ~/.bashrc
+  475  source ../root_install/bin/thisroot.sh
+  476  cd root/root_build/
+  477  source ../root_install/bin/thisroot.sh
+  478  cd
+  479  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  480  ls
+  481  g++ -g -o scaler300s scaler_300s.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  482  cd
+  483  cd root/
+  484  cd root_install/
+  485  ls
+  486  ls bin/
+  487  source bin/thisroot.sh
+  488  .demo
+  489  root
+  490  source ~/.bashrc
+  491  vim ~/.bashrc
+  492  cd $HOME
+  493  code .bashrc
+  494  vim .bashrc
+  495  source ~/.bashrc
+  496  vim .bashrc
+  497  source ~/.bashrc
+  498  echo $ROOTSYS
+  499  vim .bashrc
+  500  ls $ROOTSYS
+  501  source ~/.bashrc
+  502  vim .bashrc
+  503  source ~/.bashrc
+  504  vim .bashrc
+  505  source ~/.bashrc
+  506  ls $ROOTSYS
+  507  root
+  508  ls
+  509  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  510  ls
+  511  g++ -g -o scaler300s scaler_300s.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  512  ls
+  513  g++ -g -o kk average_window.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  514  exit
+  515  cd root/root_install/bin/
+  516  pwd
+  517  root
+  518  cd
+  519  root
+  520  exit
+  521  root
+  522  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  523  ls
+  524  g++ -g -o kk average_window.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  525  vim /.bashrc
+  526  vim ./bashrc
+  527  cd
+  528  cd $HOME
+  529  vim /.bashrc
+  530  vim ./bashrc
+  531  root
+  532  root-config --libs
+  533  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  534  ls
+  535  root-config --libs
+  536  g++ -o kk average_window.C -L/home/jennifer/root/root_install/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  537  ls
+  538  vim scaler_300s.C
+  539  vim average_window.C
+  540  vim scaler_300s.C
+  541  g++ -o kk average_window.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  542  ls
+  543  ./kk
+  544  g++ -o scaler_300s scaler_300s.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  545  g++ -o scaler_300s scaler_300sV2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  546  ls
+  547  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  548  ls
+  549  ./scaler_300s
+  550  ls
+  551  vim scaler_300V2.C
+  552  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  553  ls
+  554  ./scaler_300s
+  555  ls
+  556  vim scaler_300s.csv
+  557  vim scaler_300V2.C
+  558  ls
+  559  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  560  ls
+  561  ./scaler_300s 
+  562  ls
+  563  vim scaler_300s.csv
+  564  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  565  vim scaler_300s.csv
+  566  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  567  ./scaler_300s 
+  568  vim scaler_300s.csv
+  569  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  570  ./scaler_300s 
+  571  vim scaler_300s.csv
+  572  ./scaler_300s 
+  573  ls
+  574  vim scaler_300s.csv
+  575  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  576  ./scaler_300s 
+  577  vim scaler_300s.csv
+  578  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  579  ./scaler_300s 
+  580  vim scaler_300s.csv
+  581  cd
+  582  cd /home/jennifer/root/root_install/lib
+  583  ls
+  584  cd
+  585  cd Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  586  ls
+  587  vim scaler_300s.C
+  588  vim scaler_300V2.C
+  589  ls
+  590  vim scaler_300s.csv
+  591  vim scaler_300V2.C
+  592  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  593  git status
+  594  git add .
+  595  git commit -m "Extracting the final dataset"
+  596  git push
+  597  cd data_reduction/
+  598  cd onefile/
+  599  ls
+  600  rm scaler_300s.C
+  601  vim scaler_prom.C
+  602  g++ -o scaler_prom scaler_prom.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  603  ls
+  604  ./scaler_prom 
+  605  ls
+  606  vim scaler_prom.csv
+  607  vim scaler_prom.C
+  608  g++ -o scaler_prom scaler_prom.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  609  ./scaler_prom 
+  610  vim scaler_prom.C
+  611  g++ -o scaler_prom scaler_prom.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  612  ./scaler_prom 
+  613  vim scaler_prom.C
+  614  sftp -o Port=443 gaugo@augerlogin.iap.kit.edu
+  615  htop
+  616  sudo snap install htop
+  617  ls
+  618  htop
+  619  ls
+  620  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  621  ls
+  622  data_reduction/
+  623  ls
+  624  cd data_reduction/onefile/
+  625  ls
+  626  root
+  627  ls
+  628  ./overall.sh 
+  629  cd ../../../msc_tesis/scaler_for_solar_analysis/data_reduction/onefile/
+  630  ls
+  631  geddit scaler_300V2.C
+  632  ls
+  633  cd ../../
+  634  vi scaler_300s.csv 
+  635  cd data_reduction/one
+  636  cd data_reduction/onefile/
+  637  ls
+  638  vim scaler_300V3.C
+  639  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  640  vim scaler_300V3.C
+  641  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  642  vim scaler_300V3.C
+  643  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  644  ./scaler_FILTERED 
+  645  vim scaler_300V3.C
+  646  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  647  ./scaler_FILTERED 
+  648  vim scaler_300V3.C
+  649  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  650  ./scaler_FILTERED 
+  651  vim scaler_300V3.C
+  652  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  653  ./scaler_FILTERED 
+  654  ls
+  655  vim scaler_300s_FILTERED.csv
+  656  vim scaler_300V3.C
+  657  ls
+  658  root
+  659  vim scaler_300V3.C
+  660  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  661  ./scaler_FILTERED 
+  662  vim scaler_300V3.C
+  663  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  664  vim scaler_300V3.C
+  665  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  666  ./scaler_FILTERED 
+  667  ls
+  668  vim scaler_300s_FILTERED.csv
+  669  vim scaler_300s.csv
+  670  root
+  671  ls
+  672  vim scaler_300V3.C
+  673  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  674  vim scaler_300V3.C
+  675  g++ -o scaler_FILTERED scaler_300V3.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  676  ./scaler_FILTERED 
+  677  vim scaler_300s_FILTERED.csv
+  678  ls
+  679  cp scaler_FILTERED /home/jennifer/Documentos/Master/scaler-output/scalar_analysis
+  680  ls
+  681  pwd
+  682  ls
+  683  cp ../../
+  684  ls
+  685  cd ../../
+  686  ls
+  687  cp data_reduction/onefile/scaler_300s_FINAL.csv .
+  688  ls
+  689  vim scaler_300s_FINAL.csv
+  690  git status
+  691  git add .
+  692  git commit -m "Power spectrum, wavelet and dataset"
+  693  git push
+  694  pd
+  695  pwd
+  696  ls
+  697  cd 2008/02/
+  698  ls
+  699  ls
+  700  vim scaler_300V2.C
+  701  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  702  [A
+  703  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  704  ls
+  705  ./scaler_300s
+  706  ls
+  707  vim scaler_300s.csv
+  708  rm *.csv
+  709  ls
+  710  vim scaler_300V2.C
+  711  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  712  ./scaler_300s
+  713  ls
+  714  vim scaler_300s.csv
+  715  vim scaler_300V2.C
+  716  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  717  ./scaler_300s
+  718  vim scaler_300V2.C
+  719  g++ -o scaler_300s scaler_300V2.C -L/home/jennifer/root/root_install/lib -I/home/jennifer/root/root_install/include -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/jennifer/root/root_install/lib -pthread -lm -ldl -rdynamic
+  720  ./scaler_300s
+  721  ls
+  722  vim scaler_300s.csv
+  723  vim scaler_300V2.C
+  724  cd
+  725  curl -o- https://deb.packages.mattermost.com/repo-setup.sh | sudo bash -s mattermost
+  726  sudo snap install curl
+  727  curl -o- https://deb.packages.mattermost.com/repo-setup.sh | sudo bash -s mattermost
+  728  sudo apt install mattermost -y
+  729  sudo install -C -m 600 -o mattermost -g mattermost /opt/mattermost/config/config.defaults.json /opt/mattermost/config/config.json
+  730  sudo systemctl start mattermost
+  731  http://localhost:8065
+  732  sudo systemctl enable mattermost.service
+  733  sudo apt update && sudo apt upgrade
+  734  mattermost
+  735  curl -o- https://deb.packages.mattermost.com/setup-repo.sh | sudo bash
+  736  sudo apt install mattermost-desktop
+  737  sudo apt upgrade mattermost-desktop
+  738  jgrisale@cca.in2p3.fr
+  739  ssh jgrisale@cca.in2p3.fr
+  740  sftp -o Port=443 gaugo@augerlogin.iap.kit.edu
+  741  screen -S downdata
+  742  sudo apt install screen
+  743  screen -S downdata
+  744  screen -r downdata
+  745  ls
+  746  vim README.md
+  747  screen -r downdata
+  748  kill 100375
+  749  ls
+  750  cd Documentos/Master/scaler-output/scalar_analysis/
+  751  ls
+  752  vim overall.sh
+  753  vim merging.sh
+  754  ls
+  755  cd ../
+  756  ls
+  757  cd scaler-analysis/
+  758  grep -Rnw -e 'RejectionFlags'
+  759  grep -Rnw -e 'fCorrectedArrayVarianceOfMeanScalers'
+  760  cd ../scaler-output/scalar_analysis/
+  761  pwd
+  762  ls
+  763  vim overall.sh 
+  764  pwd
+  765  vim overall.sh 
+  766  screen -S ScalarFilter
+  767  screen -r ScalarFilter
+  768  kill 137842
+  769  ls
+  770  vim merging.sh
+  771  ./merging.sh 
+  772  ls
+  773  vim scaler_300s_FINAL.csv
+  774  cp scaler_300s_FINAL.csv /home/jennifer/Documentos/msc_tesis/scaler_for_solar_analysis/data_reduction/onefile
+  775  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  776  git status
+  777  git add .
+  778  git commit -m "Promedios en el archivo"
+  779  git push
+  780  cd data_reduction/onefile/
+  781  ls
+  782  vim scaler_300V2.C
+  783  root
+  784  cd ../../
+  785  ls
+  786  jupyter notebook
+  787  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  788  jupyter notebook
+  789  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  790  jupyter notebook
+  791  exit
+  792  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  793  git status
+  794  git pull
+  795  sudo apt-get update
+  796  sudo apt-get upgrade
+  797  sudo apt-get autoremove
+  798  sudo apt-get update
+  799  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  800  jupyter notebook
+  801  git status
+  802  git add .
+  803  git commit -m "Neutron Monitor Work 17 October 2021"
+  804  git push
+  805  jupyter notebook
+  806  ls
+  807  vim scaler_300s_FINAL.csv
+  808  ls
+  809  vim scaler_300s_FINAL.csv
+  810  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  811  jupyter notebook
+  812  cd ../
+  813  l
+  814  ls
+  815  cd Master/scaler-output/
+  816  ls
+  817  cd scalar_analysis/
+  818  ls
+  819  cd
+  820  wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+  821  sudo apt-get install libfuse2
+  822  sudo apt-get remove mattermost
+  823  sudo apt-get install libfuse2
+  824  wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+  825  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  826  git status
+  827  git add .
+  828  git commit -m "Neutron monitor finished 18 oct"
+  829  git push
+  830  jupyter notebook
+  831  cd solar_parameters/
+  832  ls
+  833  awk 'NR==1' omni2_all_years.dat
+  834  awk -F' ' '{print NF; exit}' omni2_all_years.dat
+  835  awk -F'\t' '{print NF; exit}' omni2_all_years.dat
+  836  awk 'NR==3' omni2_all_years.dat
+  837  awk 'NR==23' omni2_all_years.dat
+  838  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  839  git status
+  840  git add .
+  841  git commit -m "Potencias 19 oct"
+  842  git push
+  843  jupyter notebook
+  844  cd Documentos/msc_tesis/scaler_for_solar_analysis/
+  845  git status
+  846  git add .
+  847  git commit -m "Avances 21 oct"
+  848  git push
+  849  jupyter notebook
+  850  git status
+  851  git add .
+  852  git commit -m "arreglo 21 oct"
+  853  git push
+  854  git commit -a
+  855  git push
+  856  git fetch origin
+  857  git pull
+  858  git commit -a
+  859  git push
+  860  git lfs install
+  861  sudo git lfs install
+  862  sudo apt-get install git-lfs
+  863  sudo apt-get update
+  864  sudo apt-get upgrade
+  865  git lfs push --all origin
+  866  git push
+  867  git log
+  868  history > commits.txt
