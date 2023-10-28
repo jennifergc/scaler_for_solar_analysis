@@ -82,7 +82,7 @@
 #
 #    SCALE = the vector of scale indices, given by S0*2**(j*DJ), j=0...J1
 #            where J1+1 is the total # of scales.
-#
+#1
 #    COI = if specified, then return the Cone-of-Influence, which is a vector
 #        of N points that contains the maximum period of useful information
 #        at that particular time.
@@ -149,6 +149,7 @@ def wavelet(Y, dt, pad=0, dj=-1, s0=-1, J1=-1, mother=-1, param=-1, freq=None):
         scale = s0 * 2. ** (j * dj)
         freq = 1. / (fourier_factor * scale)
         period = 1. / freq
+        print(j,freq)
     else:
         scale = 1. / (fourier_factor * freq)
         period = 1. / freq

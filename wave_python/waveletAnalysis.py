@@ -33,15 +33,16 @@ print("variance = ", variance)
 # normalize by standard deviation (not necessary, but makes it easier
 # to compare with plot on Interactive Wavelet page, at
 # "http://paos.colorado.edu/research/wavelets/plot/"
-if 0:
-    variance = 1.0
-    sst = sst / np.std(sst, ddof=1)
+#if 0:  #JENNN
+#    variance = 1.0 #JENNNN
+#    sst = sst / np.std(sst, ddof=1)   #JENNN
 n = len(sst)
 dt = 0.25
 time = np.arange(len(sst)) * dt + 1871.0  # construct time array
 xlim = ([1870, 2000])  # plotting range
 pad = 1  # pad the time series with zeroes (recommended)
 dj = 0.25  # this will do 4 sub-octaves per octave
+#dj = 1 
 s0 = 2 * dt  # this says start at a scale of 6 months
 j1 = 7 / dj  # this says do 7 powers-of-two with dj sub-octaves each
 lag1 = 0.72  # lag-1 autocorrelation for red noise background
@@ -49,9 +50,12 @@ print("lag1 = ", lag1)
 mother = 'MORLET'
 
 # Wavelet transform:
-wave, period, scale, coi = wavelet(sst, dt, pad, dj, s0, j1, mother)
+#wave, period, scale, coi = wavelet(sst, dt, pad, dj, s0, j1, mother)
+
+wave, period, scale, coi = wavelet(sst, dt,pad=0, dj=-1, s0=-1, J1=-1, mother=-1, param=-1, freq=None)
 power = (np.abs(wave)) ** 2  # compute wavelet power spectrum
 global_ws = (np.sum(power, axis=1) / n)  # time-average over all times
+print(scale, len(scale))
 
 # Significance levels:
 signif = wave_signif(([variance]), dt=dt, sigtest=0, scale=scale,
@@ -149,4 +153,5 @@ plt.ylabel('Avg variance (\u00B0C$^2$)')
 plt.title('d) 2-8 yr Scale-average Time Series')
 plt.plot(xlim, scaleavg_signif + [0, 0], '--')
 
+plt.savefig('prueba3.png')
 plt.show()
