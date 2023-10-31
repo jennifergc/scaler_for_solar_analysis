@@ -105,6 +105,7 @@ def wavelet(Y, dt, pad=0, dj=-1, s0=-1, J1=-1, mother=-1, param=-1, freq=None):
         dj = 1. / 4.
     if J1 == -1:
         J1 = np.fix((np.log(n1 * dt / s0) / np.log(2)) / dj)
+        print("El valor de J1 es: ", J1, "\n")
     if mother == -1:
         mother = 'MORLET'
 
@@ -149,7 +150,7 @@ def wavelet(Y, dt, pad=0, dj=-1, s0=-1, J1=-1, mother=-1, param=-1, freq=None):
         scale = s0 * 2. ** (j * dj)
         freq = 1. / (fourier_factor * scale)
         period = 1. / freq
-        print(j,freq)
+        print("Los valores j son: ", j, "\n")
     else:
         scale = 1. / (fourier_factor * freq)
         period = 1. / freq
@@ -312,10 +313,10 @@ def wave_signif(Y, dt, scale, sigtest=0, lag1=0.0, siglvl=0.95,
 
     # get the appropriate parameters [see Table(2)]
     if mother == 'MORLET':  # ----------------------------------  Morlet
-        empir = ([2., -1, -1, -1])
+        empir = ([2., -1, -1, -1])   #####################-------------------------------------
         if param is None:
             param = 6.
-            empir[1:] = ([0.776, 2.32, 0.60])
+            empir[1:] = ([0.776, 2.32, 0.60]) #####################-------------------------------------
         k0 = param
         # Scale-->Fourier [Sec.3h]
         fourier_factor = (4 * np.pi) / (k0 + np.sqrt(2 + k0 ** 2))

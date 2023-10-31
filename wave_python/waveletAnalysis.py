@@ -37,25 +37,26 @@ print("variance = ", variance)
 #    variance = 1.0 #JENNNN
 #    sst = sst / np.std(sst, ddof=1)   #JENNN
 n = len(sst)
-dt = 0.25
+dt = 0.25 #Años
 time = np.arange(len(sst)) * dt + 1871.0  # construct time array
 xlim = ([1870, 2000])  # plotting range
 pad = 1  # pad the time series with zeroes (recommended)
-dj = 0.25  # this will do 4 sub-octaves per octave
+dj = 0.125  # this will do 4 sub-octaves per octave
 #dj = 1 
 s0 = 2 * dt  # this says start at a scale of 6 months
 j1 = 7 / dj  # this says do 7 powers-of-two with dj sub-octaves each
+#j1=-1
 lag1 = 0.72  # lag-1 autocorrelation for red noise background
-print("lag1 = ", lag1)
+print("lag1 = ", lag1, "\n")
 mother = 'MORLET'
 
 # Wavelet transform:
-#wave, period, scale, coi = wavelet(sst, dt, pad, dj, s0, j1, mother)
-
-wave, period, scale, coi = wavelet(sst, dt,pad=0, dj=-1, s0=-1, J1=-1, mother=-1, param=-1, freq=None)
+#wave, period, scale, coi = wavelet(sst, dt,pad=0, dj=-1, s0=-1, J1=-1, mother=-1, param=-1, freq=None)
+wave, period, scale, coi = wavelet(sst, dt, pad, dj, s0, j1, mother)
+#wave, period, scale, coi = wavelet(sst, dt, pad=0, dj, s0, j1, mother)
 power = (np.abs(wave)) ** 2  # compute wavelet power spectrum
 global_ws = (np.sum(power, axis=1) / n)  # time-average over all times
-print(scale, len(scale))
+print("La escala es: ", scale, " y el tamaño es de: ", len(scale), "\n", "El periodo es: ", period, "\n")
 
 # Significance levels:
 signif = wave_signif(([variance]), dt=dt, sigtest=0, scale=scale,
