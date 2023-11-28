@@ -1,0 +1,87 @@
+New corrections and selections and introduce new corrections to increase the data
+quality
+We then focus on showing that this data set is suitable for studying solar physics
+by searching for known and expected signals.
+where also the different time intervals for data
+collection are indicated
+The data, that are not available on the scale of single seconds like the scalers, are inter-
+polated in case of the monitoring values and the weather data.
+
+*****  Identification of Bad Stations:  selecting those
+stations that are in general ready to take valid data and send valid data for each second. All
+the following selections are applied on single seconds on data only.
+
+*****Station outliers:  the removal of stations because
+they report a very high count rate in a single second without other stations affected as well. To be able to detect outliers, we need an estimate of the mean and variance at the time
+of interest. and use the median and the median absolute deviation (MAD) to estimate mean and variance. With both the median and the MAD available,
+the outlier detection is simple: for every second and station in the input data, the quantity 4.1
+
+*****Lightning and Localised Excesses: Since the threshold of the Scaler is low, the Scaler rate is very sensitive to the electromagnetic
+pulse associated with lightning strikes important for background rejection in analyses of the scaler rate
+
+The general concept for identifying seconds with lightning strikes is similar to the search
+of rate increases correlated with gamma-ray bursts 
+
+ Here, as for the selection of station outliers, we take the
+median of five-minute intervals as a robust estimate of the mean rate hΓi, and estimate the
+current standard deviation σ̂ with the median absolute deviation under a Gaussian assump-
+tion. These quantities are defined for each available SD
+
+se a Gaussian background model with a common additional signal s to estimate the significance of excesses.
+
+*****Averaging and Scaling:
+For every station, we use the arithmetic mean over all seconds in the interval that are not removed by one of the criteria discussed before.
+
+ Then, the average over all such stations can
+be computed. We want to emphasize here, that we chose to keep the analysis on the level
+of single stations as long as possible and thus use this order of averaging.
+
+ If no weighting
+with the number of active seconds is used, this is numerically different to using the average
+over the stations per second and taking the mean in the time interval. Because we will apply
+corrections for long-term effects on station basis, the aforementioned way of calculating
+the mean per station is conceptually clearer.
+
+ For these corrections, we will also use the
+averaged quantity, e.g. the average atmospheric pressure, or the average Area-over-Peak
+that we calculate in the same way.
+
+
+*****Corrections for long-term trends:
+
+ we have to account for
+the known long-term trends caused by detector ageing and changes in the atmosphere
+
+The first important correction is accounting for the change of rate of measured particles with changes of the 
+------------------------ A) atmospheric pressure. 
+
+
+It can be easily understood that an increased
+atmospheric pressure corresponds to higher mass overburden above the detector and thus
+an anti-correlation with the Scaler rate is expected. This anti-correlation can be fitted by
+using e.g. a simple linear model Γ = a0 + a1 ( p( t) − h pi) and then corrected with
+Γcorrected (t ) = Γ (t) − a1( p (t) − h pi).
+ (4.12)
+Extending this model to single stations, we observe a correlation of the coefficients a1 of the
+stations with their average rate (a0 )
+
+Next, we perform a correction with respect to the 
+----------------------B) Area-over-Peak (AoP) of a station that
+captures changes in the pulse shape in the SD. The AoP-correction is necessary for long-term
+studies because it changes on a scale of years. Although such a correction has been reported
+previously
+
+----------------------C) Baseline correction
+ drift of the baseline in the stations. The
+baseline of the PMTs in the field is constantly changing correlated with temperature. Because
+of the integer nature of FADCs, and thus the thresholds of the Scaler, this can lead to residual
+changes in the measured rate. Fig. 4.11 shows this effect for a single station by plotting the
+scaler rate as a function of time compared with the baseline of PMT-1. It is clear that the
+shape of the measured Scaler resembles the baseline drift, however, broken into a piece-
+wise function. These discontinuities come from the online-calibration that is performed
+in the station during data taking and that corrects for the baseline drift
+
+
+
+
+
