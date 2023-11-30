@@ -8,6 +8,8 @@ from astropy.coordinates import EarthLocation, AltAz, get_body
 import astropy.units as u
 from augerscalerpy.scaler_cleaning import scaler_clean, plot_data
 from augerscalerpy.plot_config import configure_plots
+from scipy.stats import norm
+
 
 ##### FAST FOURIER TRANSFORM
 
@@ -68,6 +70,10 @@ def scalerfft_period(sample,dataframe,marks,name,scalercol):
     sampling_rate = sample  # Unidad de tiempo entre mediciones
     n = len(data)  # Número de puntos de datos
     frequencies = np.fft.fftfreq(n, d=sampling_rate)
+
+    # Calcula el intervalo de confianza del 95%
+    confidence_interval = norm.interval(0.95, loc=np.mean(power_spectrum), scale=np.std(power_spectrum))
+    
     # INGRESAR LISTA DE VALORES PARA MARCAR EN LA GRÁFICA (OPCIONAL) esto es si mark=1
     # Calcular los períodos correspondientes a las frecuencias
     periods = 1 / frequencies  # Calculamos el período en segundos
@@ -107,7 +113,10 @@ def scalerfft_period(sample,dataframe,marks,name,scalercol):
         for period in periods_to_mark:
             plt.axvline(x=period, color='red', linestyle='--', label=f'Frecuencia {period} nHz')
             plt.text(period, 1, f'{period} d', rotation=50, va='bottom', ha='center')
-   
+
+    # Agrega la línea del límite superior del intervalo de confianza a la gráfica
+    plt.axhline(y=confidence_interval[1], color='r', linestyle='--')
+    
     plt.grid()
     # Nombre del archivo de salida
     archivo_salida = f'{name}.png' #f-string{name}.png para formatear el nombre del archivo de salida.
