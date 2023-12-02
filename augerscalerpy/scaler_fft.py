@@ -9,6 +9,7 @@ import astropy.units as u
 from augerscalerpy.scaler_cleaning import scaler_clean, plot_data
 from augerscalerpy.plot_config import configure_plots
 from scipy.stats import norm
+import matplotlib.ticker as mticker
 
 
 ##### FAST FOURIER TRANSFORM
@@ -67,17 +68,13 @@ def scalerfft_period(sample,dataframe,marks,name,scalercol):
     data = dataframe[scalercol]
     fft_result = np.fft.fft(data)
     power_spectrum = np.abs(fft_result)**2
+    
     sampling_rate = sample  # Unidad de tiempo entre mediciones
     n = len(data)  # Número de puntos de datos
     frequencies = np.fft.fftfreq(n, d=sampling_rate)
 
-    # Calcula el intervalo de confianza del 95%
-    confidence_interval = norm.interval(0.95, loc=np.mean(power_spectrum), scale=np.std(power_spectrum))
-    
-    # INGRESAR LISTA DE VALORES PARA MARCAR EN LA GRÁFICA (OPCIONAL) esto es si mark=1
-    # Calcular los períodos correspondientes a las frecuencias
     periods = 1 / frequencies  # Calculamos el período en segundos
-    # Escalar los períodos a días (ajusta según tus necesidades)
+    # Escalar los períodos a días
     periods_days = periods / 86400  # 86400 segundos en un día
     periods_to_mark = []
     # Pedir al usuario que ingrese valores hasta que deseen detenerse
@@ -100,25 +97,39 @@ def scalerfft_period(sample,dataframe,marks,name,scalercol):
     periods_days_sorted = sorted(periods_days, reverse=True)
     power_spectrum_sorted = [power_spectrum[i] for i in np.argsort(periods_days)[::-1]]
     # PLOTTING______________Crear la gráfica del espectro de potencias
-    configure_plots()
-    plt.plot(periods_days_sorted, power_spectrum_sorted)
-    plt.yscale('log')  # Configurar el eje vertical en escala logarítmica
-    plt.xscale('log')  # Configurar el eje horizontal en escala logarítmica
-    plt.gca().invert_xaxis()  # Invertir el eje x
-    plt.xlabel('Período (días)')
-    plt.ylabel('Potencia')
-    #plt.title('Espectro de Potencias con Frecuencias en nHz')
+    plt.figure(figsize=(10, 6))
+    plt.plot(periods_days_sorted, power_spectrum_sorted, color='teal') # SIN SMOOTH ACTIVE ESTO
+    ############################################## SI SE REQUIERE SMOOTH ACTIVE ESTO
+    #x = periods_days_sorted
+    #y = power_spectrum_sorted
+    # Definir el tamaño de la ventana para el promedio móvil
+    #window_size =5
+    # Calcular el promedio móvil
+    #y_smooth = np.convolve(y, np.ones(window_size)/window_size, mode='same')
+    #plt.plot(x, y_smooth, label='Suavizado', color='teal')
+    ##############################################
+    plt.yscale('log')
+    plt.xscale('log')
+    plt.gca().invert_xaxis()
+    #plt.gca().xaxis.set_major_formatter(mticker.FormatStrFormatter('%.0e'))
+    plt.xlabel('Período (días)', fontsize=14)
+    plt.ylabel('PSD', fontsize=14)
+    plt.tick_params(axis='both', which='major', labelsize=14)
+    
+    #plt.title('PSD', fontsize=16, pad=20)
+    
     # Agregar líneas verticales y etiquetas
     if marks==1:
         for period in periods_to_mark:
-            plt.axvline(x=period, color='red', linestyle='--', label=f'Frecuencia {period} nHz')
-            plt.text(period, 1, f'{period} d', rotation=50, va='bottom', ha='center')
+            plt.axvline(x=period, color='red', linestyle='--', label=f'Frecuencia {period} nHz', alpha=0.5)
+            plt.text(period, 1.1, f'{period} d', rotation=50, va='top', ha='center', fontsize=12)
 
-    # Agrega la línea del límite superior del intervalo de confianza a la gráfica
-    plt.axhline(y=confidence_interval[1], color='r', linestyle='--')
     
-    plt.grid()
-    # Nombre del archivo de salida
-    archivo_salida = f'{name}.png' #f-string{name}.png para formatear el nombre del archivo de salida.
-    plt. savefig(archivo_salida)
+    plt.grid(which='both', linestyle='--', linewidth=0.5)
+    #plt.gca().xaxis.set_major_formatter(mticker.ScalarFormatter())
+    #plt.gca().xaxis.set_minor_formatter(mticker.NullFormatter())
+    
+    archivo_salida = f'{name}.pdf'
+    plt.savefig(archivo_salida, dpi=300, bbox_inches='tight')
     plt.show()
+    return periods_days_sorted, power_spectrum_sorted
