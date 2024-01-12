@@ -64,7 +64,7 @@ def scalerfft_frec(sample,dataframe,marks,name,scalercol):
     plt. savefig(archivo_salida)
     plt.show()
 
-def scalerfft_period(sample,dataframe,marks,name,scalercol):
+def scalerfft_OLD(sample,dataframe,marks,name,scalercol):
     data = dataframe[scalercol]
     fft_result = np.fft.fft(data)
     power_spectrum = np.abs(fft_result)**2
@@ -102,13 +102,15 @@ def scalerfft_period(sample,dataframe,marks,name,scalercol):
     ############################################## SI SE REQUIERE SMOOTH ACTIVE ESTO
     #x = periods_days_sorted
     #y = power_spectrum_sorted
-    # Definir el tamaño de la ventana para el promedio móvil
+    #Definir el tamaño de la ventana para el promedio móvil
     #window_size =5
-    # Calcular el promedio móvil
+    #Calcular el promedio móvil
     #y_smooth = np.convolve(y, np.ones(window_size)/window_size, mode='same')
     #plt.plot(x, y_smooth, label='Suavizado', color='teal')
     ##############################################
     plt.yscale('log')
+    plt.ylim(10**0, 10**11)
+    #plt.yticks([10**1, 10**3, 10**5, 10**7, 10**9, 10**11])
     plt.xscale('log')
     plt.gca().invert_xaxis()
     #plt.gca().xaxis.set_major_formatter(mticker.FormatStrFormatter('%.0e'))
@@ -128,6 +130,72 @@ def scalerfft_period(sample,dataframe,marks,name,scalercol):
     plt.grid(which='both', linestyle='--', linewidth=0.5)
     #plt.gca().xaxis.set_major_formatter(mticker.ScalarFormatter())
     #plt.gca().xaxis.set_minor_formatter(mticker.NullFormatter())
+    
+    archivo_salida = f'{name}.pdf'
+    plt.savefig(archivo_salida, dpi=300, bbox_inches='tight')
+    plt.show()
+    return periods_days_sorted, power_spectrum_sorted
+
+def scalerfft_period(sample, dataframe, marks, name, scalercol, smooth=False):
+    data = dataframe[scalercol]
+    fft_result = np.fft.fft(data)
+    power_spectrum = np.abs(fft_result)**2
+    
+    sampling_rate = sample  # Unidad de tiempo entre mediciones
+    n = len(data)  # Número de puntos de datos
+    frequencies = np.fft.fftfreq(n, d=sampling_rate)
+
+    periods = 1 / frequencies  # Calculamos el período en segundos
+    # Escalar los períodos a días
+    periods_days = periods / 86400  # 86400 segundos en un día
+    periods_to_mark = []
+    # Pedir al usuario que ingrese valores hasta que deseen detenerse
+    if marks==1:
+        while True:
+            valor = input("Ingresa un valor de periodo (en días) o escribe 'fin' para detenerte: ")
+            # Verificar si el usuario desea detenerse
+            if valor.lower() == 'fin':
+                break
+            try:
+                # Convertir el valor ingresado a un número de punto flotante
+                valor_periodo = float(valor)
+                periods_to_mark.append(valor_periodo)
+            except ValueError:
+                print("¡Valor no válido! Ingresa un número válido o 'fin' para detenerte.")
+    # Imprimir la lista de valores ingresados
+    print("Valores ingresados:", periods_to_mark)
+    
+   # Ordenar los períodos de mayor a menor
+    periods_days_sorted = sorted(periods_days, reverse=True)
+    power_spectrum_sorted = [power_spectrum[i] for i in np.argsort(periods_days)[::-1]]
+    # PLOTTING______________Crear la gráfica del espectro de potencias
+    plt.figure(figsize=(10, 6))
+    if smooth:
+        x = periods_days_sorted
+        y = power_spectrum_sorted
+        #Definir el tamaño de la ventana para el promedio móvil
+        window_size =5
+        #Calcular el promedio móvil
+        y_smooth = np.convolve(y, np.ones(window_size)/window_size, mode='same')
+        plt.plot(x, y_smooth, label='Suavizado', color='teal')
+    else:
+        plt.plot(periods_days_sorted, power_spectrum_sorted, color='teal') # SIN SMOOTH ACTIVE ESTO
+    plt.yscale('log')
+    #plt.ylim(10**0, 10**11)
+    plt.xscale('log')
+    plt.gca().invert_xaxis()
+    plt.xlabel('Período (días)', fontsize=14)
+    plt.ylabel('PSD', fontsize=14)
+    plt.tick_params(axis='both', which='major', labelsize=14)
+    
+    # Agregar líneas verticales y etiquetas
+    if marks==1:
+        for period in periods_to_mark:
+            plt.axvline(x=period, color='red', linestyle='--', label=f'Frecuencia {period} nHz', alpha=0.5)
+            plt.text(period, 1.1, f'{period} d', rotation=50, va='top', ha='center', fontsize=12)
+
+    
+    plt.grid(which='both', linestyle='--', linewidth=0.5)
     
     archivo_salida = f'{name}.pdf'
     plt.savefig(archivo_salida, dpi=300, bbox_inches='tight')
